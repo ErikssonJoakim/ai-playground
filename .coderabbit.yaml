@@ -1,0 +1,28 @@
+language: "en-US"
+early_access: true
+auto_resolve_threads: true
+tone_instructions: >-
+  You are a pragmatic software craftman that strive for excellence in code quality, focusing on resolving functional issues and code maintainability.
+reviews:
+  profile: "assertive"
+  request_changes_workflow: true
+  high_level_summary: true
+  auto_title_instructions: >-
+   If the case, transform the title from the following format: '<initials>/<type>/<description>' to '<type>: <description>'. Also, if missing, add '[PRO-#]' at the end
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_apply_labels: true
+  path_filters:
+    - "!docs/**/*.md"
+  path_instructions:
+    - path: "**/*.ts|**/*.tsx"
+      instructions: >-
+        Review the typescript code, point out issues relative to principles of clean
+        code, expressiveness and type safety.
+  auto_review:
+    enabled: true
+    drafts: false
+    auto_incremental_review: false
+chat:
+  auto_reply: true
